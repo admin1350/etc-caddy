@@ -7,6 +7,12 @@
 {
 	# Email для регистрации в Let's Encrypt и уведомлений о продлении
 	email admin@lord-mikrotik.ru
+    servers {
+        listener_wrappers {
+            proxy_protocol
+            tls
+        }
+    }
 }
 
 nextcloud.reisber.space {
@@ -28,4 +34,6 @@ nextcloud.reisber.space {
 	log {
 		level ERROR
 	}
+
+
 }
